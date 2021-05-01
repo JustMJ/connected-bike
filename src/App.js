@@ -33,6 +33,18 @@ const CONNECTED = "connected";
 const RECORDING = "recording";
 const STOPPED = "stopped";
 
+class App extends React.Component {
+  componentDidMount() {
+    console.log('Loading')
+    
+    window.gapi.load('auth2', () => {
+      window.gapi.auth2.init({
+        client_id:'oclpag5tpcoulu01cplmpvb7e8kqvbp3.apps.googleusercontent.com'
+      })
+      console.log('API inited')
+    })
+  }
+
 function App() {
   const [user, setUser] = useState();
   const [activityState, setActivityState] = useState(DISCONNECTED);
