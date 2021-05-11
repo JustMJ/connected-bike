@@ -12,7 +12,6 @@ import {
 import { connect } from "./services/bikeDataService";
 import Dashboard from "./Dashboard";
 import { BluethoothIcon, PlayIcon, StopIcon } from "./Icons";
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import "./App.css";
 import { AccountControls } from "./components/AccountControls";
 import {
@@ -33,7 +32,6 @@ const DISCONNECTED = "disconnected";
 const CONNECTED = "connected";
 const RECORDING = "recording";
 const STOPPED = "stopped";
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
 function App() {
   const [user, setUser] = useState();
@@ -152,31 +150,6 @@ function App() {
       <div className="account-controls">
         <AccountControls onUserLoaded={setUser} />
       </div>
-        <div className="App">
-      <Navbar collapseOnSelect expand="lg" style={{backgroundColor: '#272727'}}>
-        <Navbar.Brand href="#home" style={{color: '#ffffff'}}>Fit Me Up</Navbar.Brand>
-        <Nav className="mr-auto">
-        </Nav>
-        <Nav>
-          {user.haslogin ?
-            <GoogleLogout
-              clientId={CLIENT_ID}
-              buttonText='Logout'
-              onLogoutSuccess={logout}
-              onFailure={handleLogoutFailure}
-            >
-            </GoogleLogout> : <GoogleLogin
-              clientId={CLIENT_ID}
-              buttonText='Login'
-              onSuccess={login}
-              onFailure={handleLoginFailure}
-              cookiePolicy={'single_host_origin'}
-              responseType='code,token'
-              scope = { 'https://www.googleapis.com/auth/fitness.activity.read https://www.googleapis.com/auth/fitness.location.read'}
-            />
-          }
-        </Nav>
-      </Navbar>
     </div>
   );
 }
