@@ -6,7 +6,7 @@ import {
   setUserCookie,
 } from "../services/cookieService";
 
-const CLIENT_ID = '133837097756-oclpag5tpcoulu01cplmpvb7e8kqvbp3.apps.googleusercontent.com';
+const CLIENT_ID = '967648223830-tcpvun94dhva1f0l4b3gpbj840ecnevd.apps.googleusercontent.com';
 
 const SCOPE = [
   "https://www.googleapis.com/auth/fitness.activity.read",
