@@ -244,7 +244,7 @@ export const toDisplay = (sessions) => {
     const averagePower = Math.round(average(power));
     const averageHeartRate = Math.round(average(heartRate));
     const averageCadence = Math.round(average(cadence));
-    const totalMoveMinutes = Math.round(sum(moveMinutes) / 60000);
+    const totalMoveMinutes = Math.round(sum(moveMinutes));
     const totalHeartPoints = Math.round(sum(heartPoints));
     const totalCalories = Math.round(sum(calories));
 

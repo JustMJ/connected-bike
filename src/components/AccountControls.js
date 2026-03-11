@@ -19,16 +19,18 @@ export const AccountControls = ({ onUserLoaded }) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = (response) => {
+    const accessToken = response.accessToken;
+
     setUserCookie({
       ...response.profileObj,
-      accessToken: response.xc.access_token,
+      accessToken,
     });
 
-    if (response.xc.access_token) {
+    if (accessToken) {
       onUserLoaded({
         ...response.profileObj,
         haslogin: true,
-        accessToken: response.xc.access_token,
+        accessToken,
       });
       setLoggedIn(true);
     }

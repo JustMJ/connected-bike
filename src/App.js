@@ -49,15 +49,20 @@ function App() {
   };
 
   const handleUpload = async (dataSets) => {
-    // TODO only upload if logged in? save local otherwise?
-    // TODO some kind of error handling?
+    if (!user) {
+      setMessage("Please log in to save your session.");
+      return;
+    }
+
     setMessage("Uploading...");
-    await uploadSession(dataSets);
 
-    console.log("FINAL");
-    console.log(dataSets);
-
-    setMessage("Upload complete!");
+    try {
+      await uploadSession(dataSets);
+      setMessage("Upload complete!");
+    } catch (e) {
+      console.error(e);
+      setMessage("Upload failed. Please try again.");
+    }
   };
 
   const handleRecord = () => {

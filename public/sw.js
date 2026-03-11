@@ -21,7 +21,7 @@ self.addEventListener("fetch", (event) => {
 
       return fetch(event.request).then((res) => {
         // don't cache unsuccessful requests
-        if (res.code !== 200) {
+        if (res.status !== 200) {
           return res;
         }
 
