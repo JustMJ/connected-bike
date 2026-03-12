@@ -49,10 +49,7 @@ function App() {
     setLiveHistory([]);
     bikeData$.current.pipe(throttleTime(2000)).subscribe((d) => {
       setDisplayData(d);
-      setLiveHistory((prev) => [
-        ...prev.slice(-150),
-        { ...d, startTime: new Date() },
-      ]);
+      setLiveHistory((prev) => [...prev, { ...d, startTime: new Date() }]);
     });
   };
 
