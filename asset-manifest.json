@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/connected-bike/static/css/main.732e7323.chunk.css",
-    "main.js": "/connected-bike/static/js/main.34dbfab8.chunk.js",
-    "main.js.map": "/connected-bike/static/js/main.34dbfab8.chunk.js.map",
+    "main.js": "/connected-bike/static/js/main.9073d591.chunk.js",
+    "main.js.map": "/connected-bike/static/js/main.9073d591.chunk.js.map",
     "runtime-main.js": "/connected-bike/static/js/runtime-main.d81d212f.js",
     "runtime-main.js.map": "/connected-bike/static/js/runtime-main.d81d212f.js.map",
     "static/js/2.a112baac.chunk.js": "/connected-bike/static/js/2.a112baac.chunk.js",
     "static/js/2.a112baac.chunk.js.map": "/connected-bike/static/js/2.a112baac.chunk.js.map",
     "index.html": "/connected-bike/index.html",
-    "precache-manifest.e3c73f5b69eb0d59e601ab86995cf470.js": "/connected-bike/precache-manifest.e3c73f5b69eb0d59e601ab86995cf470.js",
+    "precache-manifest.58e49a39cf74072d0ddb6c0de9e00688.js": "/connected-bike/precache-manifest.58e49a39cf74072d0ddb6c0de9e00688.js",
     "service-worker.js": "/connected-bike/service-worker.js",
     "static/css/main.732e7323.chunk.css.map": "/connected-bike/static/css/main.732e7323.chunk.css.map",
     "static/js/2.a112baac.chunk.js.LICENSE.txt": "/connected-bike/static/js/2.a112baac.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d81d212f.js",
     "static/js/2.a112baac.chunk.js",
     "static/css/main.732e7323.chunk.css",
-    "static/js/main.34dbfab8.chunk.js"
+    "static/js/main.9073d591.chunk.js"
   ]
 }
