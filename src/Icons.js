@@ -43,6 +43,22 @@ export const StopIcon = () => (
   </svg>
 );
 
+export const HeartIcon = () => (
+  <svg
+    viewBox="0 0 15 15"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    width="15"
+    height="15"
+  >
+    <path
+      d="M7.5 13.5l-6-6a3.5 3.5 0 014.95-4.95L7.5 3.6l1.05-1.05a3.5 3.5 0 014.95 4.95l-6 6z"
+      stroke="currentColor"
+      strokeLinejoin="round"
+    ></path>
+  </svg>
+);
+
 export const UploadIcon = () => (
   <svg
     viewBox="0 0 15 15"

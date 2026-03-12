@@ -9,9 +9,9 @@ import {
   throttleTime,
   toArray,
 } from "rxjs/operators";
-import { connect } from "./services/bikeDataService";
+import { connect, connectHeartRate } from "./services/bikeDataService";
 import Dashboard from "./Dashboard";
-import { BluethoothIcon, PlayIcon, StopIcon } from "./Icons";
+import { BluethoothIcon, HeartIcon, PlayIcon, StopIcon } from "./Icons";
 import "./App.css";
 import { AccountControls } from "./components/AccountControls";
 import {
@@ -38,6 +38,8 @@ function App() {
   const [activityState, setActivityState] = useState(DISCONNECTED);
   const [displayData, setDisplayData] = useState();
   const [liveHistory, setLiveHistory] = useState([]);
+  const [watchConnected, setWatchConnected] = useState(false);
+  const watchHeartRate = useRef(0);
   // TODO find a way to not duplicate this flag
   const isRecording = useRef(false);
   const bikeData$ = useRef();
@@ -48,8 +50,16 @@ function App() {
     setActivityState(CONNECTED);
     setLiveHistory([]);
     bikeData$.current.pipe(throttleTime(2000)).subscribe((d) => {
-      setDisplayData(d);
-      setLiveHistory((prev) => [...prev, { ...d, startTime: new Date() }]);
+      const merged = { ...d, heartRate: watchHeartRate.current || d.heartRate };
+      setDisplayData(merged);
+      setLiveHistory((prev) => [...prev, { ...merged, startTime: new Date() }]);
+    });
+  };
+
+  const handleConnectWatch = () => {
+    connectHeartRate().subscribe((hr) => {
+      watchHeartRate.current = hr;
+      setWatchConnected(true);
     });
   };
 
@@ -133,6 +143,12 @@ function App() {
       {activityState === DISCONNECTED && (
         <button onClick={handleConnect}>
           <BluethoothIcon />
+        </button>
+      )}
+
+      {activityState !== DISCONNECTED && !watchConnected && (
+        <button onClick={handleConnectWatch}>
+          <HeartIcon />
         </button>
       )}
 

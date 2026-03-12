@@ -27,6 +27,20 @@ const parseBikeData = (value) => {
   return result;
 };
 
+const parseHeartRateData = (value) => {
+  const flags = value.getUint8(0);
+  const is16bit = flags & 0x1;
+  return is16bit ? value.getUint16(1, true) : value.getUint8(1);
+};
+
+export const connectHeartRate = () => {
+  return from(observe("heart_rate", "heart_rate_measurement")).pipe(
+    switchMap((sub) => sub),
+    map((e) => e.target.value),
+    map((raw) => parseHeartRateData(raw))
+  );
+};
+
 export const connect = () => {
   // random data for debugging
   if (false) {
