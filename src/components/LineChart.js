@@ -50,12 +50,12 @@ const draw = (ref, data, totalWidth, totalHeight, color) => {
   svg.append("g").classed("label", true).call(d3.axisLeft(y).ticks(3));
 };
 
-export const LineChart = ({ data, color }) => {
+export const LineChart = ({ data, color, width = 200, height = 50 }) => {
   const chartRef = useRef();
 
   useEffect(() => {
-    draw(chartRef, data, 200, 50, color);
-  }, [data, color]);
+    draw(chartRef, data, width, height, color);
+  }, [data, color, width, height]);
 
   return <div ref={chartRef} className="line-chart"></div>;
 };

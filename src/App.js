@@ -37,6 +37,7 @@ function App() {
   const [user, setUser] = useState();
   const [activityState, setActivityState] = useState(DISCONNECTED);
   const [displayData, setDisplayData] = useState();
+  const [liveHistory, setLiveHistory] = useState([]);
   // TODO find a way to not duplicate this flag
   const isRecording = useRef(false);
   const bikeData$ = useRef();
@@ -45,7 +46,14 @@ function App() {
   const handleConnect = () => {
     bikeData$.current = connect();
     setActivityState(CONNECTED);
-    bikeData$.current.pipe(throttleTime(2000)).subscribe(setDisplayData);
+    setLiveHistory([]);
+    bikeData$.current.pipe(throttleTime(2000)).subscribe((d) => {
+      setDisplayData(d);
+      setLiveHistory((prev) => [
+        ...prev.slice(-150),
+        { ...d, startTime: new Date() },
+      ]);
+    });
   };
 
   const handleUpload = async (dataSets) => {
@@ -143,7 +151,7 @@ function App() {
         </button>
       )}
 
-      {displayData && <Dashboard data={displayData} />}
+      {displayData && <Dashboard data={displayData} liveHistory={liveHistory} />}
 
       <History user={user} />
 
