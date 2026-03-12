@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/connected-bike/static/css/main.303be7b8.chunk.css",
-    "main.js": "/connected-bike/static/js/main.7ef08418.chunk.js",
-    "main.js.map": "/connected-bike/static/js/main.7ef08418.chunk.js.map",
+    "main.js": "/connected-bike/static/js/main.5aebf69d.chunk.js",
+    "main.js.map": "/connected-bike/static/js/main.5aebf69d.chunk.js.map",
     "runtime-main.js": "/connected-bike/static/js/runtime-main.d81d212f.js",
     "runtime-main.js.map": "/connected-bike/static/js/runtime-main.d81d212f.js.map",
-    "static/js/2.0c176dba.chunk.js": "/connected-bike/static/js/2.0c176dba.chunk.js",
-    "static/js/2.0c176dba.chunk.js.map": "/connected-bike/static/js/2.0c176dba.chunk.js.map",
+    "static/js/2.ffdea901.chunk.js": "/connected-bike/static/js/2.ffdea901.chunk.js",
+    "static/js/2.ffdea901.chunk.js.map": "/connected-bike/static/js/2.ffdea901.chunk.js.map",
     "index.html": "/connected-bike/index.html",
-    "precache-manifest.0f978d76488e4a7117ce24ef4ea39e86.js": "/connected-bike/precache-manifest.0f978d76488e4a7117ce24ef4ea39e86.js",
+    "precache-manifest.e4f2493fca5bd31ff901da0ff13e3616.js": "/connected-bike/precache-manifest.e4f2493fca5bd31ff901da0ff13e3616.js",
     "service-worker.js": "/connected-bike/service-worker.js",
     "static/css/main.303be7b8.chunk.css.map": "/connected-bike/static/css/main.303be7b8.chunk.css.map",
-    "static/js/2.0c176dba.chunk.js.LICENSE.txt": "/connected-bike/static/js/2.0c176dba.chunk.js.LICENSE.txt"
+    "static/js/2.ffdea901.chunk.js.LICENSE.txt": "/connected-bike/static/js/2.ffdea901.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d81d212f.js",
-    "static/js/2.0c176dba.chunk.js",
+    "static/js/2.ffdea901.chunk.js",
     "static/css/main.303be7b8.chunk.css",
-    "static/js/main.7ef08418.chunk.js"
+    "static/js/main.5aebf69d.chunk.js"
   ]
 }
