@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/connected-bike/precache-manifest.52b2c7572771c5a4f71e167dea2ffc66.js"
+  "/connected-bike/precache-manifest.d23308678c643bf00e79311fdc9e790d.js"
 );
 
 self.addEventListener('message', (event) => {
