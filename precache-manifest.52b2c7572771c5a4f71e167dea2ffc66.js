@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "887a06bf364736132dbf5a5079664aaf",
+    "revision": "c40bf5a2a87df0946b70498c857d21bb",
     "url": "/connected-bike/index.html"
   },
   {
-    "revision": "3ab983232f084476a069",
+    "revision": "dc3e49cdc7f691bf3fbe",
     "url": "/connected-bike/static/css/main.732e7323.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/connected-bike/static/js/2.a112baac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3ab983232f084476a069",
-    "url": "/connected-bike/static/js/main.9073d591.chunk.js"
+    "revision": "dc3e49cdc7f691bf3fbe",
+    "url": "/connected-bike/static/js/main.f2a68455.chunk.js"
   },
   {
     "revision": "e79c6cfbab9350e2706f",
